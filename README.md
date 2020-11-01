@@ -1,6 +1,6 @@
 # Stanford-Algorithms-Part-1---Assignment-3
 In this project we implement Karger's randomized contraction algorithm to find the min-cut of a given input graph.
-The graph is provided in a text file named "kargerMinCut.txt" in adjecency list representation. Every line represents a vertex followed by all the vertices adjecent to it separated with tabs.
+The graph is provided in a text file named "kargerMinCut.txt" in adjacency list representation. Every line represents a vertex followed by all the vertices adjacent to it separated with tabs.
 A test file of a small graph is also provided in "test.txt".
 An output file named "minCutOutput.txt" is generated that has the list of the edges in the min-cut represented with the two end vertices.
 
