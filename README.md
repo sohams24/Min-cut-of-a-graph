@@ -1,5 +1,5 @@
-# Stanford-Algorithms-Part-1---Assignment-3
-In this project we implement Karger's randomized contraction algorithm to find the min-cut of a given input graph.
+# Min-cut of a graph
+In this project we detect the vulnerable edges in a graph by finding its min-cut using the Karger's randomized contraction algorithm.
 The graph is provided in a text file named "kargerMinCut.txt" in adjacency list representation. Every line represents a vertex followed by all the vertices adjacent to it separated with tabs.
 A test file of a small graph is also provided in "test.txt".
 An output file named "minCutOutput.txt" is generated that has the list of the edges in the min-cut represented with the two end vertices.
@@ -31,5 +31,14 @@ The method "karger" computes the min-cut.
 kargerMinCut.py:
 This is the file that creates the "Graph" instance by passing the input file.
 Here we call the "karger" method from the graph instance.
-Since the Karger's algorithm is a randomized algorithm, it does not gurrantee to give the correct result in a single iteration.
+The Karger's algorithm does not gurrantee to give the correct result in a single iteration.
 Thus we run multiple iterations of the algorithm and choose the result that gives minimum number of edges in the min-cut.
+
+Time Complexity Analysis:
+Whenevere we contract an edge, we are changing the end vertex for all incident edges of one of the vertices (the vertex that gets deleted) of the contracted edge.
+We repeat this process n-2 times, where n=|V|. Thus total number of operations performed is proportional to the sum of the degrees of those n-2 vertices.
+Sum of the degrees of all vertices is twice the number of edges.
+Time comlplexity for one iteration: O(m) where m=|E|
+Overall time complexity for N iterations: O(N x m) where N=number of iterations performed.
+
+
