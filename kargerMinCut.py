@@ -24,7 +24,7 @@ cwd = os.getcwd()
 f = open(cwd+"\minCutOutput.txt",'w')
 f.write("Following are the edges in the min-cut of the Graph {}\n".format(filename))
 for edgeId in minCut:
-    f.write("{}\t{}\n".format(g.getEdgeDict()[edgeId].getV1(),g.getEdgeDict()[edgeId].getV2()))
+    f.write("{} - {}\n".format(g.getEdgeDict()[edgeId].getV1(),g.getEdgeDict()[edgeId].getV2()))
 f.write("Number of edges in the min-cut:{}".format(minCutlen))
 f.close()
 
